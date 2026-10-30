@@ -401,6 +401,26 @@ q{quotes:"“" "”"}
   .partners__list img{height:calc(var(--h) * 1.2) !important}
 }
 
+
+/* ===== v11: 일감의 출처 ===== */
+.brands{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px 10px}
+.brands .partners__list{grid-template-columns:repeat(3,1fr) !important;max-width:none;padding-bottom:0}
+.brands .partners__list li{height:60px;border:0 !important}
+.brands .partners__list li:nth-child(n+4){border-top:1px solid #EEF0F3 !important}
+.brands .partners__list li:not(:nth-child(3n+1)){border-left:1px solid #EEF0F3 !important}
+.brands .partners__list img{height:calc(var(--h) * .82) !important}
+.field{margin-top:14px;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.field img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.field figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
+@media (min-width:900px){
+  .brands{max-width:960px;margin:0 auto;padding:10px 16px}
+  .brands .partners__list{grid-template-columns:repeat(6,1fr) !important}
+  .brands .partners__list li{height:84px;border-top:0 !important}
+  .brands .partners__list li+li{border-left:1px solid #EEF0F3 !important}
+  .brands .partners__list img{height:calc(var(--h) * 1.15) !important}
+  .field{max-width:720px;margin:24px auto 0}
+}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
