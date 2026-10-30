@@ -458,6 +458,9 @@ q{quotes:"“" "”"}
 .mcard--line{border:2px solid var(--navy)}
 #zero .zero li{background:#fff}
 
+/* v16: 첫 화면 썸네일은 16:9 원본 비율 그대로 */
+.hero .hero__media img{aspect-ratio:16/9 !important;object-fit:cover;object-position:50% 50% !important}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
