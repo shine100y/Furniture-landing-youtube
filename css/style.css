@@ -488,7 +488,7 @@ q{quotes:"“" "”"}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:880px;margin:12px auto 0}
 .pgrid article{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 16px;text-align:center}
 .pgrid__when{display:inline-block;font-size:13px;font-weight:800;color:var(--navy);background:var(--yellow-soft);border-radius:999px;padding:2px 10px}
-.pgrid h3{font-size:20px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
+.pgrid h3,.pgrid h4{font-size:20px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
 .pgrid b{display:block;font-size:clamp(18px,5vw,22px);color:#2A5BB8;margin-top:4px;letter-spacing:-.02em}
 .pgrid p:not(.pgrid__when){font-size:14px;color:var(--mute);margin-top:6px;line-height:1.55}
 .incent{max-width:880px;margin:12px auto 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:6px 20px}
@@ -511,6 +511,35 @@ q{quotes:"“" "”"}
 /* v20: 교육 섹션 통합 */
 #edu .tgrid li{background:#fff;border:1px solid var(--line)}
 #edu .vstory{max-width:480px;margin:32px auto 0}
+
+
+/* ===== v21: 센터별 지원 사례 ===== */
+.notice{max-width:880px;margin:0 auto 16px;background:#FFF7DD;border:1.5px solid #F2D27A;border-radius:12px;padding:16px 18px;font-size:15px;line-height:1.6;color:#4A3B0C}
+.notice b{display:block;color:#3A2C00;margin-bottom:2px}
+.cases{display:grid;gap:14px;max-width:880px;margin:0 auto}
+.case{border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;background:#fff}
+.case__tag{display:inline-block;font-size:13px;font-weight:800;color:#2A5BB8;background:#EAF3FF;border-radius:6px;padding:3px 9px}
+.case__h{font-size:clamp(21px,5.8vw,26px);font-weight:800;line-height:1.35;letter-spacing:-.03em;margin-top:10px}
+.case__h em{font-style:normal;color:#C88A00}
+.case__desc{font-size:14px;color:var(--mute);margin-top:8px}
+.case .ptotal{margin-top:16px;padding:20px 16px}
+.case .ptotal__h{font-size:clamp(18px,5vw,22px)}
+.more{margin-top:12px}
+.more summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:center;gap:6px;height:46px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-weight:700;color:var(--navy);background:var(--paper)}
+.more summary::-webkit-details-marker{display:none}
+.more summary::after{content:"";width:8px;height:8px;border:solid var(--navy);border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.more[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.more[open] summary{margin-bottom:12px}
+.more .pgrid,.more .incent{max-width:none}
+.more .fine{text-align:left;line-height:1.6;margin-top:12px}
+@media (min-width:900px){
+  .cases{grid-template-columns:1fr 1.4fr;align-items:start;gap:20px}
+  .case{padding:32px 28px}
+  .notice{margin-bottom:20px;padding:18px 24px}
+}
+
+.pgrid h4{margin:8px 0 0;font-size:19px}
+.more .pgrid article{padding:16px 12px}
 
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
