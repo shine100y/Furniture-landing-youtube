@@ -58,7 +58,7 @@ q{quotes:"“" "”"}
 .stats dt{font-size:13px;color:#9FB0C4}
 .stats dd{font-size:clamp(24px,6.8vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1.25;margin-top:4px;font-variant-numeric:tabular-nums}
 .stats small{font-size:.5em;font-weight:600;margin-left:2px;color:#C9D3E0}
-.hero .btn--lg{margin-top:28px;width:100%}
+.hero .btn--lg{margin-top:40px;width:100%}
 .hero__note{font-size:13px;color:#9FB0C4;margin-top:10px;text-align:center}
 .hero__media{position:relative;margin-top:36px;border-radius:var(--r);overflow:hidden;background:#000}
 .hero__media img{width:100%;aspect-ratio:16/9.6;object-fit:cover;object-position:50% 100%}
@@ -142,11 +142,11 @@ q{quotes:"“" "”"}
 
 /* ===== 후기 ===== */
 .stories{display:grid;gap:12px}
-.story{background:var(--navy-2);color:#fff;border-radius:var(--r);padding:24px 22px}
+.story{background:#C5CDD8;color:var(--ink);border-radius:var(--r);padding:24px 22px}
 .story__h{font-size:20px;font-weight:800;line-height:1.45;letter-spacing:-.03em}
 .story p+p{margin-top:12px}
 .story p:not(.story__h):not(.story__by){font-size:16px;color:#3A4350}
-.story__by{font-size:14px;color:#AEBCCD;margin-top:14px !important}
+.story__by{font-size:14px;color:#46505E;margin-top:14px !important}
 .story--main{background:var(--navy);color:#fff}
 .story--main .story__h{font-size:clamp(24px,6.6vw,30px);color:var(--yellow)}
 .story--main p:not(.story__h):not(.story__by){color:#D6DEE8}
@@ -361,6 +361,32 @@ q{quotes:"“" "”"}
 .price__h em{font-style:normal;color:var(--yellow)}
 .price__desc{font-size:15px;color:#D6DEE8;margin-top:10px;line-height:1.6}
 
+
+/* ===== v9 ===== */
+.hero__sub small{font-size:14px;color:#9FB0C4}
+.partners__list img{max-height:30px}
+.proofs__dots{display:flex;justify-content:center;gap:6px;margin-top:6px}
+.proofs__dots span{width:7px;height:7px;border-radius:50%;background:#C8CFD8;transition:width .2s,background .2s}
+.proofs__dots span.is-on{width:20px;border-radius:4px;background:var(--navy)}
+.proofs__hint{text-align:center;font-size:13px;color:var(--mute);margin-top:6px}
+.proofs{-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.vstory{margin-top:28px;text-align:center}
+.vcard{position:relative;display:block;width:100%;padding:0;border:0;background:#000;border-radius:var(--r);overflow:hidden;cursor:pointer}
+.vcard img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:opacity .2s}
+.vcard:hover img{opacity:.88}
+.vcard__play{position:absolute;left:50%;top:42%;width:68px;height:68px;margin:-34px 0 0 -34px;border-radius:50%;background:rgba(255,0,0,.92);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.vcard__play::after{content:"";position:absolute;left:27px;top:21px;border-style:solid;border-width:13px 0 13px 21px;border-color:transparent transparent transparent #fff}
+.vcard__label{position:absolute;right:12px;top:12px;font-size:13px;font-weight:700;color:#fff;background:rgba(0,0,0,.6);border-radius:999px;padding:4px 12px}
+.vstory__q{margin-top:18px;font-size:clamp(20px,5.6vw,24px);font-weight:800;letter-spacing:-.03em;line-height:1.45}
+.vstory__src{font-size:14px;color:var(--mute);margin-top:6px}
+.vmodal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:16px}
+.vmodal[hidden]{display:none}
+.vmodal__bg{position:absolute;inset:0;background:rgba(5,12,22,.82)}
+.vmodal__box{position:relative;width:100%;max-width:960px}
+.vmodal__frame{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}
+.vmodal__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vmodal__x{position:absolute;right:0;top:-48px;width:40px;height:40px;border:0;border-radius:50%;background:#fff;color:var(--ink);font-size:26px;line-height:1;cursor:pointer}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
@@ -467,4 +493,7 @@ q{quotes:"“" "”"}
   .work{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
   .price{margin-top:0;padding:44px 36px}
   .flow2 li{font-size:22px}
+  .partners__list img{max-height:36px}
+  .proofs__dots,.proofs__hint{display:none}
+  .vstory{margin-top:0}
 }

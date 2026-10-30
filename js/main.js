@@ -138,8 +138,59 @@ var PAGE_NAME = '가구설치기사';
       body: new URLSearchParams(data)
     }).then(finish).catch(function () {
       submitBtn.disabled = false;
-      submitBtn.textContent = '지원서 보내기';
+      submitBtn.textContent = '1차 지원서 보내기';
       statusEl.textContent = '전송에 실패했어요. 인터넷 연결을 확인한 뒤 다시 눌러주세요.';
     });
   });
+})();
+
+/* ---------- 유튜브 영상 팝업 ---------- */
+(function () {
+  'use strict';
+  var modal = document.getElementById('vmodal');
+  var frame = document.getElementById('vframe');
+  if (!modal || !frame) return;
+  var lastBtn = null;
+
+  function open(btn) {
+    var id = btn.getAttribute('data-video-id');
+    if (!/^[\w-]{6,20}$/.test(id)) return;
+    lastBtn = btn;
+    var title = btn.getAttribute('data-video-title') || '유튜브 영상';
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+      '?autoplay=1&rel=0&playsinline=1" title="' + title.replace(/"/g, '') +
+      '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    modal.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    modal.querySelector('.vmodal__x').focus();
+  }
+  function close() {
+    frame.innerHTML = '';
+    modal.hidden = true;
+    document.documentElement.style.overflow = '';
+    if (lastBtn) lastBtn.focus();
+  }
+  document.querySelectorAll('[data-video-id]').forEach(function (b) {
+    b.addEventListener('click', function () { open(b); });
+  });
+  modal.addEventListener('click', function (e) { if (e.target.hasAttribute('data-close')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
+})();
+
+/* ---------- 지급 명세서 슬라이드 점 표시 ---------- */
+(function () {
+  'use strict';
+  var box = document.getElementById('proofs');
+  var dots = document.querySelectorAll('#proofDots span');
+  if (!box || !dots.length) return;
+  var items = box.children;
+  function update() {
+    var mid = box.scrollLeft + box.clientWidth / 2, best = 0, bestD = Infinity;
+    for (var i = 0; i < items.length; i++) {
+      var c = items[i].offsetLeft + items[i].offsetWidth / 2, d = Math.abs(c - mid);
+      if (d < bestD) { bestD = d; best = i; }
+    }
+    dots.forEach(function (d, i) { d.classList.toggle('is-on', i === best); });
+  }
+  box.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
 })();
