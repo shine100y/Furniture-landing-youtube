@@ -618,6 +618,21 @@ html{scroll-padding-top:72px}
 .vline::after{content:"";position:absolute;left:50%;bottom:-5px;width:9px;height:9px;margin-left:-4.5px;background:var(--yellow);transform:rotate(45deg)}
 #company .vline + .head{margin-top:0}
 
+/* v37: 숫자를 사진 가운데에 (레퍼런스) */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#company .members-photo::after{background:
+  linear-gradient(180deg,#fff 0%,rgba(255,255,255,.92) 8%,rgba(255,255,255,0) 26%,rgba(16,36,58,0) 70%,rgba(16,36,58,.85) 90%,var(--navy) 100%),
+  radial-gradient(ellipse 70% 38% at 50% 50%,rgba(10,22,36,.55),rgba(10,22,36,.15) 100%)}
+.photo-stats{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);z-index:1;text-align:center;margin:0;padding:0 16px}
+.photo-stats dt{font-size:clamp(17px,5vw,26px);font-weight:700;color:#fff;letter-spacing:-.02em;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.photo-stats dd{margin:0}
+.photo-stats span{display:inline-block;background:var(--yellow);color:#111;font-weight:900;letter-spacing:-.03em;line-height:1.15}
+.photo-stats__main span{font-size:clamp(46px,14vw,84px);padding:4px 18px;margin-top:10px;font-variant-numeric:tabular-nums}
+.photo-stats__sub span{font-size:clamp(22px,6.6vw,38px);padding:4px 14px;margin-top:14px}
+.photo-stats__asof{font-size:12px;color:#E3E9F1;margin-top:10px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+#company .wrap{margin-top:0}
+#company .vline{margin-top:6px}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
