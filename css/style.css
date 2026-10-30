@@ -574,13 +574,32 @@ q{quotes:"“" "”"}
 .closing__lead b{font-weight:800;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%)}
 .closing__sub{margin-top:20px;font-size:clamp(16px,4.4vw,18px);color:var(--mute);line-height:1.7}
 
-/* v29: PC에서도 모바일과 같은 비율 - 가운데 한 줄 페이지 */
-@media (min-width:700px){
+/* v30: 흰색 상단바 + 로고 (레퍼런스) */
+.topbar{background:#fff;color:var(--ink);border-bottom:1px solid #EDF0F2;backdrop-filter:none}
+.topbar__in{height:64px;padding:0 20px}
+.brand img{display:block;width:124px;height:auto}
+.topbar .btn--sm{background:var(--navy);color:#fff}
+.topbar .btn--sm:hover{background:#1A3654}
+html{scroll-padding-top:72px}
+
+/* v30: 지원 전 확인 (레퍼런스) */
+.fit-list{max-width:none}
+.fit-list li{position:relative;padding:15px 12px 15px 44px;border-bottom:1px solid var(--line);font-size:17px;font-weight:700;line-height:1.5}
+.fit-list li::before{content:"✓";position:absolute;left:9px;top:14px;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#E2F5ED;color:#1F9D6B;font-size:14px;font-weight:900}
+.interview-copy{margin-top:26px;padding:23px;border-radius:15px;background:#FFF6CC}
+.interview-copy b{font-size:19px}
+.interview-copy p{margin-top:7px;color:#3A4350}
+
+/* v30: PC - 레퍼런스처럼 폭 780px 가운데 페이지 */
+@media (min-width:820px){
   html{background:#E7EBEF}
-  body{max-width:640px;margin:0 auto;background:#fff;box-shadow:0 0 46px rgba(16,36,58,.12);padding-bottom:calc(var(--dock-h) + 20px)}
-  .wrap{max-width:none;padding:0 32px}
-  .dock{left:calc(50% - 308px);right:calc(50% - 308px)}
-  .proofs{margin:0 -32px;padding:4px 32px 12px;grid-auto-columns:70%}
+  body{max-width:780px;margin:28px auto;background:#fff;border-radius:20px;overflow:clip;box-shadow:0 0 46px rgba(16,36,58,.1);padding-bottom:0}
+  .topbar__in{height:72px;padding:0 26px}
+  .brand img{width:142px}
+  .wrap{max-width:none;padding:0 56px}
+  .proofs{margin:0 -56px;padding:4px 56px 12px;grid-auto-columns:62%}
+  .dock{left:calc(50% - 370px);right:calc(50% - 370px)}
+  .foot{padding-bottom:110px}
 }
 
 /* ===== 푸터 ===== */
