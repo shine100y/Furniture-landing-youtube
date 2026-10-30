@@ -402,23 +402,25 @@ q{quotes:"“" "”"}
 }
 
 
-/* ===== v11: 일감의 출처 ===== */
-.brands{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px 10px}
-.brands .partners__list{grid-template-columns:repeat(3,1fr) !important;max-width:none;padding-bottom:0}
-.brands .partners__list li{height:60px;border:0 !important}
-.brands .partners__list li:nth-child(n+4){border-top:1px solid #EEF0F3 !important}
-.brands .partners__list li:not(:nth-child(3n+1)){border-left:1px solid #EEF0F3 !important}
-.brands .partners__list img{height:calc(var(--h) * .82) !important}
-.field{margin-top:14px;border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line)}
-.field img{width:100%;aspect-ratio:16/9;object-fit:cover}
-.field figcaption{font-size:13px;color:var(--mute);padding:10px 14px}
+/* ===== v12: 모집 공고 배지 (레퍼런스) ===== */
+.recruit-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08);font-size:14px;line-height:1.4}
+.recruit-badge span{color:#A9C4DF}
+.recruit-badge b{color:#fff;font-weight:800}
+
+/* ===== v12: 일감의 출처 (레퍼런스 디자인) ===== */
+#brands .head{margin-bottom:28px}
+.brand-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.brand-card{height:78px;display:grid;place-items:center;padding:12px;background:#fff;border-radius:13px;overflow:hidden}
+.brand-card img{height:calc(var(--h) * .72);width:auto;max-width:100%;object-fit:contain}
+.brands__desc{margin-top:22px;font-size:16px;color:#D6DEE8;line-height:1.65}
+.field{margin-top:24px}
+.field img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px}
+.field figcaption{margin-top:8px;font-size:13px;color:#AFC0CC}
 @media (min-width:900px){
-  .brands{max-width:960px;margin:0 auto;padding:10px 16px}
-  .brands .partners__list{grid-template-columns:repeat(6,1fr) !important}
-  .brands .partners__list li{height:84px;border-top:0 !important}
-  .brands .partners__list li+li{border-left:1px solid #EEF0F3 !important}
-  .brands .partners__list img{height:calc(var(--h) * 1.15) !important}
-  .field{max-width:720px;margin:24px auto 0}
+  #brands .wrap{max-width:880px}
+  .brand-card{height:94px;padding:18px 16px}
+  .brand-card img{height:var(--h)}
+  .brands__desc{font-size:17px}
 }
 
 /* ===== 푸터 ===== */
