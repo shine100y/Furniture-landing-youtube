@@ -455,7 +455,8 @@ q{quotes:"“" "”"}
 @media (min-width:600px){.br-wide{display:inline}}
 
 /* v15: 이직 프로그램은 흰색 + 진한 테두리 */
-.mcard--line{border:2px solid var(--navy)}
+.mcard--line{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#F3D27A,#C8961E 45%,#F7E3A3 70%,#B8860B) border-box}
+.mcard--line .mcard__tag{background:#F7E3A3}
 #zero .zero li{background:#fff}
 
 /* v16: 첫 화면 썸네일은 16:9 원본 비율 그대로 */
