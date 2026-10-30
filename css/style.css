@@ -546,10 +546,10 @@ q{quotes:"“" "”"}
 #company .members-photo{height:auto;overflow:hidden;background:none}
 #company .members-photo img{display:block;width:100%;height:auto;aspect-ratio:1280/1268;object-fit:cover;filter:none;-webkit-mask-image:none;mask-image:none}
 #company .members-photo::after{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.92) 8%,rgba(255,255,255,0) 30%,rgba(16,36,58,0) 55%,rgba(16,36,58,.8) 82%,var(--navy) 100%)}
-#company .wrap{margin-top:-90px}
+#company .wrap{margin-top:-10px}
 @media (min-width:900px){
   #company .members-photo img{aspect-ratio:auto;height:760px;object-position:50% 40%}
-  #company .wrap{margin-top:-140px}
+  #company .wrap{margin-top:-40px}
 }
 
 /* v24: 짧은 후기 테두리 */
