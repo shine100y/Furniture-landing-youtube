@@ -636,7 +636,7 @@ html{scroll-padding-top:72px}
 /* v38: 서포트 번호 */
 .kicker--num{display:inline-flex;align-items:stretch;gap:0;border:1.5px solid var(--navy);border-radius:999px;overflow:hidden;background:#fff;color:var(--navy);font-size:14px;font-weight:800;padding:0}
 .kicker--num span{display:flex;align-items:center;background:var(--navy);color:var(--yellow);font-size:13px;font-weight:800;padding:5px 12px}
-.kicker--num{padding-right:14px}
+.kicker--num{padding-right:14px;display:flex;width:max-content;max-width:100%;margin-left:auto;margin-right:auto}
 .kicker--num span{margin-right:10px}
 
 /* ===== 푸터 ===== */
