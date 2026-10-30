@@ -210,7 +210,8 @@ q{quotes:"“" "”"}
 /* ===== 주요 협력사 ===== */
 .partners{padding:28px 0 8px;border-bottom:1px solid var(--line)}
 .partners__h{font-size:14px;font-weight:700;color:var(--mute);text-align:center;margin-bottom:14px}
-.partners__list{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 10px;align-items:center;justify-items:center;padding-bottom:20px}
+.partners__list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 14px;align-items:center;justify-items:center;padding-bottom:20px}
+.partners__name{font-size:19px;font-weight:800;color:#3A4350;letter-spacing:-.02em}
 .partners__list img{max-height:34px;width:auto;mix-blend-mode:multiply}
 
 /* ===== 멤버십 혜택 ===== */
@@ -320,7 +321,8 @@ q{quotes:"“" "”"}
   .apply__head{position:sticky;top:120px;margin-bottom:0}
   .apply__box{padding:36px 32px 28px}
   .partners{padding:36px 0 16px}
-  .partners__list{grid-template-columns:repeat(7,1fr);gap:24px}
+  .partners__list{grid-template-columns:repeat(6,1fr);gap:24px;max-width:900px;margin:0 auto}
+  .partners__name{font-size:22px}
   .partners__list img{max-height:44px}
   .perk-grid{grid-template-columns:1fr 1fr;gap:20px}
   .mcard--wide{grid-column:1 / -1;flex-direction:row;align-items:center}
