@@ -2,6 +2,11 @@
    설정: 구글 앱스 스크립트 배포 후 나온 "웹 앱 URL"을 아래에 붙여넣으세요.
    비어 있으면 테스트 모드(실제 전송 없이 완료 화면만 표시)로 동작합니다.
    ========================================================= */
+/* 클래리티 이벤트 기록 (클래리티가 없거나 막혀 있어도 오류 없이 넘어감) */
+function track(name) {
+  try { if (typeof window.clarity === 'function') window.clarity('event', name); } catch (e) {}
+}
+
 var SHEET_URL = '';
 var PAGE_NAME = '가구설치기사';
 
@@ -16,6 +21,11 @@ var PAGE_NAME = '가구설치기사';
   UTM_KEYS.forEach(function (k) { if (params.get(k)) store[k] = params.get(k); });
   if (!store.referrer && document.referrer) store.referrer = document.referrer;
   try { sessionStorage.setItem('lp_utm', JSON.stringify(store)); } catch (e) {}
+  try {
+    if (typeof window.clarity === 'function') {
+      ['utm_source', 'utm_campaign', 'utm_content'].forEach(function (k) { if (store[k]) window.clarity('set', k, store[k]); });
+    }
+  } catch (e) {}
 
   /* ---------- 하단 고정 버튼: 지원 폼이 보이면 숨김 ---------- */
   var dock = document.getElementById('dock');
@@ -38,6 +48,8 @@ var PAGE_NAME = '가구설치기사';
   var submitBtn = document.getElementById('submitBtn');
   var statusEl = document.getElementById('formStatus');
   var doneBox = document.getElementById('doneBox');
+  var started = false;
+  form.addEventListener('focusin', function () { if (!started) { started = true; track('apply_start'); } });
 
   Object.keys(window.REGIONS || {}).forEach(function (name) {
     sido.add(new Option(name, name));
@@ -120,6 +132,7 @@ var PAGE_NAME = '가구설치기사';
     submitBtn.textContent = '보내는 중…';
 
     var finish = function () {
+      track('apply_submit');
       form.hidden = true;
       doneBox.hidden = false;
       doneBox.focus();
@@ -156,6 +169,7 @@ var PAGE_NAME = '가구설치기사';
     var id = btn.getAttribute('data-video-id');
     if (!/^[\w-]{6,20}$/.test(id)) return;
     lastBtn = btn;
+    track('video_open');
     var title = btn.getAttribute('data-video-title') || '유튜브 영상';
     frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
       '?autoplay=1&rel=0&playsinline=1" title="' + title.replace(/"/g, '') +
