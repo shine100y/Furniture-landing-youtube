@@ -639,6 +639,10 @@ html{scroll-padding-top:72px}
 .kicker--num{padding-right:14px;display:flex;width:max-content;max-width:100%;margin-left:auto;margin-right:auto}
 .kicker--num span{margin-right:10px}
 
+/* v41: 서포트 표시 안 글자를 같은 높이 선에 맞춤 */
+.kicker--num{align-items:center;line-height:1.2;margin-bottom:14px}
+.kicker--num span{align-self:stretch;line-height:1.2;padding:6px 12px}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
