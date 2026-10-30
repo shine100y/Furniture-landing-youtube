@@ -423,6 +423,10 @@ q{quotes:"“" "”"}
   .brands__desc{font-size:17px}
 }
 
+/* v13: 첫 화면 지원 버튼을 안내 문구 아래로 */
+.hero .hero__cta{margin-top:24px;width:100%}
+@media (min-width:900px){.hero .hero__cta{width:100%}}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
