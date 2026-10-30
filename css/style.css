@@ -609,6 +609,9 @@ html{scroll-padding-top:72px}
 #company .head h2{font-size:clamp(20px,5.8vw,40px)}
 #company .head h2 .mark{white-space:nowrap}
 
+/* v33: 멤버십 보너스 + 기호 */
+.plus-mark{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:var(--yellow);color:var(--navy);font-size:40px;font-weight:900;line-height:50px;text-align:center;box-shadow:0 6px 18px rgba(255,205,74,.45)}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
