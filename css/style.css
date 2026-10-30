@@ -469,6 +469,45 @@ q{quotes:"“" "”"}
 .price__h em{color:var(--navy);background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .06em}
 .price__desc{color:#3A4350}
 
+
+/* ===== v19: 교육 과정 / 정착 프로그램 ===== */
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:880px;margin:0 auto}
+.tgrid li{background:var(--paper);border-radius:var(--r);padding:20px 18px;display:grid;gap:2px}
+.tgrid span{font-size:14px;font-weight:900;color:#2A5BB8;font-variant-numeric:tabular-nums}
+.tgrid b{font-size:19px;letter-spacing:-.02em}
+.tgrid p{font-size:14px;color:var(--mute)}
+.edu-pay{max-width:880px;margin:14px auto 0;background:var(--navy);color:#fff;border-radius:var(--r);padding:24px 22px;text-align:center}
+.edu-pay__label{font-size:14px;color:#AEBCCD;font-weight:700}
+.edu-pay__h{font-size:clamp(22px,6vw,28px);font-weight:800;line-height:1.35;letter-spacing:-.03em;margin-top:4px}
+.edu-pay__h em{font-style:normal;color:var(--yellow)}
+.edu-pay__desc{font-size:14px;color:#C9D3E0;margin-top:8px}
+.ptotal{max-width:880px;margin:0 auto;background:var(--navy);color:#fff;border-radius:var(--r);padding:26px 22px;text-align:center}
+.ptotal__label{font-size:14px;color:var(--yellow);font-weight:800}
+.ptotal__h{font-size:clamp(21px,5.8vw,28px);font-weight:800;line-height:1.5;letter-spacing:-.03em;margin-top:6px}
+.ptotal__h i{font-style:normal;color:var(--yellow);margin-right:4px}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:880px;margin:12px auto 0}
+.pgrid article{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 16px;text-align:center}
+.pgrid__when{display:inline-block;font-size:13px;font-weight:800;color:var(--navy);background:var(--yellow-soft);border-radius:999px;padding:2px 10px}
+.pgrid h3{font-size:20px;font-weight:800;margin-top:8px;letter-spacing:-.02em}
+.pgrid b{display:block;font-size:clamp(18px,5vw,22px);color:#2A5BB8;margin-top:4px;letter-spacing:-.02em}
+.pgrid p:not(.pgrid__when){font-size:14px;color:var(--mute);margin-top:6px;line-height:1.55}
+.incent{max-width:880px;margin:12px auto 0;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:6px 20px}
+.incent li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}
+.incent li+li{border-top:1px dashed var(--line)}
+.incent b{font-size:16px;white-space:nowrap}
+.incent span{font-size:13px;color:var(--mute);text-align:right}
+#onboard .fine{max-width:880px;margin:16px auto 0;text-align:left;line-height:1.6}
+@media (max-width:359px){.incent li{display:block}.incent span{display:block;text-align:left;margin-top:2px}}
+@media (min-width:900px){
+  .tgrid{grid-template-columns:repeat(4,1fr);gap:16px}
+  .tgrid li{padding:28px 24px}
+  .edu-pay{margin-top:20px;padding:32px}
+  .ptotal{padding:36px}
+  .pgrid{gap:16px;margin-top:16px}
+  .pgrid article{padding:28px 24px}
+  .incent{margin-top:16px;padding:8px 32px}
+}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
