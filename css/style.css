@@ -125,10 +125,11 @@ q{quotes:"“" "”"}
 
 /* ===== 배송인그룹 ===== */
 #company{padding-top:0;position:relative}
-.members-photo{position:relative;height:200px;overflow:hidden}
-.members-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3)}
-.members-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(16,36,58,.35),var(--navy))}
-#company .wrap{position:relative;margin-top:-40px}
+.members-photo{position:relative;height:300px;overflow:hidden}
+.members-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.members-photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(16,36,58,0),var(--navy))}
+#company .wrap{position:relative;margin-top:36px}
+#company .head h2 .mark{display:inline}
 .big-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .big-stats div{background:var(--navy-2);border-radius:var(--r);padding:20px 16px;text-align:center}
 .big-stats dt{font-size:14px;color:#B9C5D3}
@@ -141,11 +142,11 @@ q{quotes:"“" "”"}
 
 /* ===== 후기 ===== */
 .stories{display:grid;gap:12px}
-.story{background:var(--paper);border-radius:var(--r);padding:24px 22px}
+.story{background:var(--navy-2);color:#fff;border-radius:var(--r);padding:24px 22px}
 .story__h{font-size:20px;font-weight:800;line-height:1.45;letter-spacing:-.03em}
 .story p+p{margin-top:12px}
 .story p:not(.story__h):not(.story__by){font-size:16px;color:#3A4350}
-.story__by{font-size:14px;color:var(--mute);margin-top:14px !important}
+.story__by{font-size:14px;color:#AEBCCD;margin-top:14px !important}
 .story--main{background:var(--navy);color:#fff}
 .story--main .story__h{font-size:clamp(24px,6.6vw,30px);color:var(--yellow)}
 .story--main p:not(.story__h):not(.story__by){color:#D6DEE8}
@@ -314,6 +315,37 @@ q{quotes:"“" "”"}
 .hint{font-size:13px;color:var(--mute);margin-top:6px}
 .apply__note{font-size:13px;color:#9FB0C4;margin-top:14px}
 
+
+/* ===== v7: 멤버십 추가 카드 ===== */
+.mcard__stat{display:inline-block;margin:0 0 12px;background:var(--navy);color:#fff;border-radius:8px;padding:6px 12px;font-size:15px !important;color:#fff !important}
+.mcard__stat b{color:var(--yellow)}
+.mcard--wide .move{margin-top:0}
+.mcard--dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.mcard--dark .mcard__body p:not(.mcard__tag){color:#D6DEE8}
+.mcard--dark .mcard__h em{color:var(--yellow)}
+.course-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}
+.course-stats div{background:rgba(255,255,255,.07);border-radius:12px;padding:14px;text-align:center}
+.course-stats dt{font-size:13px;color:#AEBCCD}
+.course-stats dd{font-size:26px;font-weight:900;color:var(--yellow);letter-spacing:-.03em;line-height:1.25;font-variant-numeric:tabular-nums}
+.course-stats small{font-size:.48em;color:#fff;font-weight:700;margin-left:2px;white-space:nowrap}
+.course-cats{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.course-cats li{font-size:13px;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 11px;color:#E3E9F1}
+.course-list{background:#fff;color:var(--ink);margin:0 22px 22px;border-radius:12px;padding:20px 20px 16px}
+.course-list__h{font-size:15px;font-weight:800;margin-bottom:10px}
+.course-list ul{display:grid;gap:0}
+.course-list li{font-size:15px;padding:8px 0;border-bottom:1px solid #EEF0F3;line-height:1.45}
+.course-list li:nth-child(n+9){display:none}
+.course-list__more{font-size:14px;color:var(--mute);margin-top:10px;text-align:right}
+.gift{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.gift li{font-size:14px;font-weight:700;background:var(--yellow-soft);color:var(--navy);border-radius:8px;padding:4px 10px}
+.feed{margin:0 22px 22px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.feed li{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:2px;padding:13px 14px;align-items:start}
+.feed li+li{border-top:1px solid #EEF0F3}
+.feed__tag{grid-row:span 2;font-size:12px;font-weight:800;color:#D93A16;background:#FDECEA;border-radius:5px;padding:2px 6px;margin-top:2px;white-space:nowrap}
+.feed__tag--ev{color:var(--navy);background:var(--yellow-soft)}
+.feed b{font-size:15px;line-height:1.45;font-weight:700}
+.feed small{font-size:12px;color:var(--mute)}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
@@ -358,8 +390,8 @@ q{quotes:"“" "”"}
   .facts b{font-size:30px}
   .facts span{text-align:left;font-size:15px}
 
-  .members-photo{height:300px}
-  #company .wrap{margin-top:-70px}
+  .members-photo{height:520px}
+  #company .wrap{margin-top:56px}
   .big-stats{max-width:880px;margin:0 auto;gap:20px}
   .big-stats div{padding:32px}
   .big-stats dd{font-size:64px}
@@ -411,4 +443,10 @@ q{quotes:"“" "”"}
   .realistic{margin-top:20px;padding:36px 40px}
   .realistic ul{grid-template-columns:1fr 1fr;gap:16px 40px}
   .supports--2{grid-template-columns:1fr 1fr;max-width:880px;margin-left:auto;margin-right:auto}
+  .course-stats dd{font-size:32px}
+  .course-list{margin:28px 28px 28px 0;flex:1.1;padding:24px}
+  .course-list ul{grid-template-columns:1fr 1fr;column-gap:20px}
+  .course-list li:nth-child(n+9){display:block}
+  .feed{flex:1.2;margin:28px 28px 28px 0}
+  .mcard--wide .move{flex:1;padding:28px 28px 28px 0}
 }
