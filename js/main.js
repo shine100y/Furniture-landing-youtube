@@ -7,7 +7,7 @@ function track(name) {
   try { if (typeof window.clarity === 'function') window.clarity('event', name); } catch (e) {}
 }
 
-var SHEET_URL = '';
+var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwVJPmkn_eVYlrLxiHlSAuFFORbncuZtgTXJh6w-tFPui5AM_dBIWFNj0uxM8W8auIdeQ/exec';
 var PAGE_NAME = '가구설치기사';
 
 (function () {
