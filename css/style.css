@@ -606,7 +606,7 @@ html{scroll-padding-top:72px}
 .proof-line{text-align:center;font-size:15px;font-weight:700;color:var(--yellow);margin:0 0 12px}
 .proof-line span{font-weight:500;font-size:13px;color:#9FB0C4;margin-left:4px}
 
-#company .head h2{font-size:clamp(20px,5.8vw,40px)}
+#company .head h2{font-size:clamp(21px,6.3vw,44px)}
 #company .head h2 .mark{white-space:nowrap}
 
 /* v33: 멤버십 보너스 + 기호 */
