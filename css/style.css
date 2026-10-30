@@ -592,7 +592,7 @@ html{scroll-padding-top:72px}
 
 /* v30: PC - 레퍼런스처럼 폭 780px 가운데 페이지 */
 @media (min-width:820px){
-  html{background:#E7EBEF}
+  html{background:#E7EBEF;overflow-y:auto}
   body{max-width:780px;margin:28px auto;background:#fff;border-radius:20px;overflow:clip;box-shadow:0 0 46px rgba(16,36,58,.1);padding-bottom:0}
   .topbar__in{height:72px;padding:0 26px}
   .brand img{width:142px}
