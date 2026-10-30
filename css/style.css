@@ -508,6 +508,10 @@ q{quotes:"“" "”"}
   .incent{margin-top:16px;padding:8px 32px}
 }
 
+/* v20: 교육 섹션 통합 */
+#edu .tgrid li{background:#fff;border:1px solid var(--line)}
+#edu .vstory{max-width:480px;margin:32px auto 0}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
