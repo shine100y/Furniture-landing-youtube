@@ -568,6 +568,12 @@ q{quotes:"“" "”"}
 .supports.supports--check li{padding:20px 20px 20px 62px}
 @media (min-width:900px){.supports.supports--check li{padding:26px 26px 26px 66px}.supports--check li::before{left:24px;top:26px}.supports--check li::after{left:34px;top:32px}}
 
+/* v28: 마무리 문단 */
+.closing{max-width:720px;margin:0 auto;text-align:center}
+.closing__lead{font-size:clamp(19px,5.2vw,28px);font-weight:700;line-height:1.6;letter-spacing:-.03em;color:var(--ink)}
+.closing__lead b{font-weight:800;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%)}
+.closing__sub{margin-top:20px;font-size:clamp(16px,4.4vw,18px);color:var(--mute);line-height:1.7}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
