@@ -12,7 +12,7 @@
 <meta property="og:image" content="img/youtube-scene.jpg">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 </head>
 <body>
 
@@ -118,7 +118,7 @@
     <div class="wrap">
       <div class="head">
         <p class="kicker">숙련에 따른 평균 매출</p>
-        <h2>초반 400~500만원에서<br><span class="mark">6개월 이후 700~800만원으로</span></h2>
+        <h2>초반 4~500만원에서<br><span class="mark">700~800만원으로</span></h2>
       </div>
       <div class="ramp">
         <div class="ramp__step">
@@ -264,17 +264,18 @@
 
   <!-- ===== 배송인그룹 ===== -->
   <section class="sec sec--navy" id="company">
-    <div class="members-photo"><img src="img/members-wall.jpg" alt="배송인그룹 소속 기사님들의 단체 사진 모음" width="1080" height="440" loading="lazy"></div>
+    <div class="members-photo" aria-hidden="true"><img src="img/members-strip.jpg" alt="" width="1080" height="340" loading="lazy"></div>
     <div class="wrap">
       <div class="head">
         <h2>배송인그룹과 함께,<br><span class="mark">데이터와 수치가 증명합니다</span></h2>
         <p class="lead">업계 최고의 관리시스템으로 기사님의 일을 뒷받침합니다.</p>
+        <p class="asof">(26.10.30 기준)</p>
       </div>
       <dl class="big-stats">
-        <div><dt>배송인그룹 소속 배송인</dt><dd>2,370<small>명</small></dd></div>
+        <div><dt>배송인그룹 소속 배송인</dt><dd>2,645<small>명</small></dd></div>
         <div><dt>근속 유지율</dt><dd>95.7<small>%</small></dd></div>
       </dl>
-      <ul class="supports supports--2">
+      <ul class="supports supports--2 supports--check">
         <li>
           <b>차량이 없어도 가능</b>
           <span>차량 임대제도로 개인 신용에 관계없이 시작할 수 있어요.</span>
@@ -298,7 +299,7 @@
 
       <div class="perk-grid">
         <!-- 1. 유연한 이직 프로그램 -->
-        <article class="mcard mcard--wide">
+        <article class="mcard mcard--wide mcard--hl">
           <div class="mcard__body">
             <p class="mcard__tag">유연한 이직 프로그램</p>
             <h3 class="mcard__h">지역 이동·분야 전환도 <em>몇 번이고</em></h3>
@@ -324,8 +325,29 @@
           </div>
         </article>
 
-        <!-- 3. 무제한 교육 수강권 -->
-        <article class="mcard mcard--wide mcard--dark">
+        <!-- 3. 카페 이벤트·혜택 -->
+        <article class="mcard mcard--wide">
+          <div class="mcard__body">
+            <p class="mcard__tag">기사님 전용 카페</p>
+            <h3 class="mcard__h">이벤트와 혜택 소식이<br><em>꾸준히</em> 올라와요</h3>
+            <p>기사님 전용 카페에서 정부지원금 신청 안내, 선물 이벤트, 장학금 발표까지 기사님께 도움이 되는 소식을 가장 먼저 받아볼 수 있어요.</p>
+            <ul class="gift">
+              <li>1++ 한우선물세트</li>
+              <li>홍삼·비타민 등 건강선물</li>
+              <li>정부지원금 신청 안내</li>
+            </ul>
+          </div>
+          <ul class="feed" aria-label="카페 실제 공지 예시">
+            <li><span class="feed__tag">공지</span><b>초성장을 위한 무제한 수강권</b><small>2025.04.02</small></li>
+            <li><span class="feed__tag">필독</span><b>2026년 정부지원금 최대 2,000만원 신청하기 (대출X, 지원금O)</b><small>2026.02.13</small></li>
+            <li><span class="feed__tag">필독</span><b>정부지원 25만원 받아요, 대부분 루매님들 모두 해당!</b><small>2026.02.24</small></li>
+            <li><span class="feed__tag feed__tag--ev">이벤트</span><b>1++ 한우선물세트의 주인공이 탄생했습니다! 2월 이벤트 당첨자 발표</b><small>채용팀장 김이화</small></li>
+            <li><span class="feed__tag feed__tag--ev">장학금</span><b>스타루트매니저 장학금 3,000,000원의 주인공 축하드립니다!</b><small>채용팀장 김이화</small></li>
+          </ul>
+        </article>
+
+        <!-- 4. 무제한 교육 수강권 -->
+        <article class="mcard mcard--wide mcard--course">
           <div class="mcard__body">
             <p class="mcard__tag">무제한 교육 수강권</p>
             <h3 class="mcard__h">유료 강의를 <em>무제한으로</em><br>자유롭게 수강해요</h3>
@@ -357,27 +379,6 @@
             <p class="course-list__more">외 5,000여 개 강의</p>
           </div>
         </article>
-
-        <!-- 4. 카페 이벤트·혜택 -->
-        <article class="mcard mcard--wide">
-          <div class="mcard__body">
-            <p class="mcard__tag">기사님 전용 카페</p>
-            <h3 class="mcard__h">이벤트와 혜택 소식이<br><em>꾸준히</em> 올라와요</h3>
-            <p>기사님 전용 카페에서 정부지원금 신청 안내, 선물 이벤트, 장학금 발표까지 기사님께 도움이 되는 소식을 가장 먼저 받아볼 수 있어요.</p>
-            <ul class="gift">
-              <li>1++ 한우선물세트</li>
-              <li>홍삼·비타민 등 건강선물</li>
-              <li>정부지원금 신청 안내</li>
-            </ul>
-          </div>
-          <ul class="feed" aria-label="카페 실제 공지 예시">
-            <li><span class="feed__tag">공지</span><b>초성장을 위한 무제한 수강권</b><small>2025.04.02</small></li>
-            <li><span class="feed__tag">필독</span><b>2026년 정부지원금 최대 2,000만원 신청하기 (대출X, 지원금O)</b><small>2026.02.13</small></li>
-            <li><span class="feed__tag">필독</span><b>정부지원 25만원 받아요, 대부분 루매님들 모두 해당!</b><small>2026.02.24</small></li>
-            <li><span class="feed__tag feed__tag--ev">이벤트</span><b>1++ 한우선물세트의 주인공이 탄생했습니다! 2월 이벤트 당첨자 발표</b><small>채용팀장 김이화</small></li>
-            <li><span class="feed__tag feed__tag--ev">장학금</span><b>스타루트매니저 장학금 3,000,000원의 주인공 축하드립니다!</b><small>채용팀장 김이화</small></li>
-          </ul>
-        </article>
       </div>
     </div>
   </section>
@@ -401,9 +402,9 @@
   <section class="sec sec--paper" id="no-scam">
     <div class="wrap">
       <div class="head">
-        <p class="kicker">Only 배송인그룹 지입사기 근절 프로그램</p>
+        <p class="kicker">지입사기 근절 프로그램</p>
         <h2>법률사무소와 함께<br><span class="mark">지입사기를 막습니다</span></h2>
-        <p class="lead">사기 사건 승소율 1위 태연 법률사무소와 자문·협력 계약을 맺고, 지입사기 완전 근절을 추구합니다.</p>
+        <p class="lead">사기 사건 승소율 1위 태연 법률사무소와 자문·협력 계약을 맺고,<br class="br-wide"> 지입사기 완전 근절을 추구합니다.</p>
       </div>
       <div class="law">
         <figure class="law__photo">
@@ -584,7 +585,7 @@
 
 <a class="dock" id="dock" href="#apply">가구설치기사 1차 지원하기</a>
 
-<script src="js/regions.js?v=13"></script>
-<script src="js/main.js?v=13"></script>
+<script src="js/regions.js?v=14"></script>
+<script src="js/main.js?v=14"></script>
 </body>
 </html>
