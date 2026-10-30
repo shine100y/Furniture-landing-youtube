@@ -346,6 +346,21 @@ q{quotes:"“" "”"}
 .feed b{font-size:15px;line-height:1.45;font-weight:700}
 .feed small{font-size:12px;color:var(--mute)}
 
+
+/* ===== v8: 심플한 업무 / 격이 다른 단가 ===== */
+.work{display:grid;gap:14px;max-width:880px;margin:0 auto}
+.flow2{display:grid;gap:0;justify-items:center}
+.flow2 li{display:flex;align-items:center;gap:10px;font-size:20px;letter-spacing:-.02em}
+.flow2 li+li::before{content:"↓";display:block;position:absolute}
+.flow2 li+li{margin-top:34px;position:relative}
+.flow2 li+li::before{left:50%;top:-30px;transform:translateX(-50%);font-size:18px;color:var(--mute)}
+.flow2__ico{font-size:24px;line-height:1}
+.price{background:var(--navy);color:#fff;border-radius:var(--r);padding:28px 22px;text-align:center;margin-top:22px}
+.price__label{font-size:14px;color:#AEBCCD}
+.price__h{font-size:clamp(24px,6.6vw,32px);font-weight:800;line-height:1.35;letter-spacing:-.035em;margin-top:6px}
+.price__h em{font-style:normal;color:var(--yellow)}
+.price__desc{font-size:15px;color:#D6DEE8;margin-top:10px;line-height:1.6}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
@@ -449,4 +464,7 @@ q{quotes:"“" "”"}
   .course-list li:nth-child(n+9){display:block}
   .feed{flex:1.2;margin:28px 28px 28px 0}
   .mcard--wide .move{flex:1;padding:28px 28px 28px 0}
+  .work{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .price{margin-top:0;padding:44px 36px}
+  .flow2 li{font-size:22px}
 }
