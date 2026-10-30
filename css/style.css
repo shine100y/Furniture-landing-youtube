@@ -633,6 +633,10 @@ html{scroll-padding-top:72px}
 #company .wrap{margin-top:0}
 #company .vline{margin-top:6px}
 
+/* v38: 서포트 번호 */
+.kicker--num{display:inline-flex;align-items:center;gap:8px}
+.kicker--num span{background:var(--navy);color:var(--yellow);font-size:13px;font-weight:800;border-radius:999px;padding:3px 10px}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
