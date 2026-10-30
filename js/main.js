@@ -138,7 +138,7 @@ var PAGE_NAME = '가구설치기사';
       body: new URLSearchParams(data)
     }).then(finish).catch(function () {
       submitBtn.disabled = false;
-      submitBtn.textContent = '1차 지원서 보내기';
+      submitBtn.textContent = '지원서 보내기';
       statusEl.textContent = '전송에 실패했어요. 인터넷 연결을 확인한 뒤 다시 눌러주세요.';
     });
   });
