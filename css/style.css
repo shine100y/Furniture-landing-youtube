@@ -394,7 +394,7 @@ q{quotes:"“" "”"}
 .partners__list li:nth-child(n+3){border-top:1px solid #EEF0F3}
 .partners__list li:nth-child(odd){border-right:1px solid #EEF0F3}
 .partners__list img{height:var(--h) !important;max-height:none !important;width:auto;max-width:86%;mix-blend-mode:multiply}
-@media (min-width:900px){
+@media (min-width:99999px){
   .partners__list{grid-template-columns:repeat(6,1fr) !important;max-width:960px}
   .partners__list li{height:72px;border:0 !important}
   .partners__list li+li{border-left:1px solid #EEF0F3 !important}
@@ -416,7 +416,7 @@ q{quotes:"“" "”"}
 .field{margin-top:24px}
 .field img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px}
 .field figcaption{margin-top:8px;font-size:13px;color:#AFC0CC}
-@media (min-width:900px){
+@media (min-width:99999px){
   #brands .wrap{max-width:880px}
   .brand-card{height:94px;padding:18px 16px}
   .brand-card img{height:var(--h)}
@@ -425,7 +425,7 @@ q{quotes:"“" "”"}
 
 /* v13: 첫 화면 지원 버튼을 안내 문구 아래로 */
 .hero .hero__cta{margin-top:24px;width:100%}
-@media (min-width:900px){.hero .hero__cta{width:100%}}
+@media (min-width:99999px){.hero .hero__cta{width:100%}}
 
 
 /* ===== v14 ===== */
@@ -452,7 +452,7 @@ q{quotes:"“" "”"}
 .mcard--course .mcard__h em{color:#C88A00}
 
 .br-wide{display:none}
-@media (min-width:600px){.br-wide{display:inline}}
+@media (min-width:480px){.br-wide{display:inline}}
 
 /* v15: 이직 프로그램은 흰색 + 진한 테두리 */
 .mcard--line{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#F3D27A,#C8961E 45%,#F7E3A3 70%,#B8860B) border-box}
@@ -498,7 +498,7 @@ q{quotes:"“" "”"}
 .incent span{font-size:13px;color:var(--mute);text-align:right}
 #onboard .fine{max-width:880px;margin:16px auto 0;text-align:left;line-height:1.6}
 @media (max-width:359px){.incent li{display:block}.incent span{display:block;text-align:left;margin-top:2px}}
-@media (min-width:900px){
+@media (min-width:99999px){
   .tgrid{grid-template-columns:repeat(4,1fr);gap:16px}
   .tgrid li{padding:28px 24px}
   .edu-pay{margin-top:20px;padding:32px}
@@ -532,7 +532,7 @@ q{quotes:"“" "”"}
 .more[open] summary{margin-bottom:12px}
 .more .pgrid,.more .incent{max-width:none}
 .more .fine{text-align:left;line-height:1.6;margin-top:12px}
-@media (min-width:900px){
+@media (min-width:99999px){
   .cases{grid-template-columns:1fr 1.4fr;align-items:start;gap:20px}
   .case{padding:32px 28px}
   .notice{margin-bottom:20px;padding:18px 24px}
@@ -547,7 +547,7 @@ q{quotes:"“" "”"}
 #company .members-photo img{display:block;width:100%;height:auto;aspect-ratio:1280/1268;object-fit:cover;filter:none;-webkit-mask-image:none;mask-image:none}
 #company .members-photo::after{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.92) 8%,rgba(255,255,255,0) 30%,rgba(16,36,58,0) 55%,rgba(16,36,58,.8) 82%,var(--navy) 100%)}
 #company .wrap{margin-top:-10px}
-@media (min-width:900px){
+@media (min-width:99999px){
   #company .members-photo img{aspect-ratio:auto;height:760px;object-position:50% 40%}
   #company .wrap{margin-top:-40px}
 }
@@ -566,20 +566,29 @@ q{quotes:"“" "”"}
 
 /* PC에서 체크 아이콘과 글자가 겹치지 않게 */
 .supports.supports--check li{padding:20px 20px 20px 62px}
-@media (min-width:900px){.supports.supports--check li{padding:26px 26px 26px 66px}.supports--check li::before{left:24px;top:26px}.supports--check li::after{left:34px;top:32px}}
+@media (min-width:99999px){.supports.supports--check li{padding:26px 26px 26px 66px}.supports--check li::before{left:24px;top:26px}.supports--check li::after{left:34px;top:32px}}
 
 /* v28: 마무리 문단 */
 .closing{max-width:720px;margin:0 auto;text-align:center}
-.closing__lead{font-size:clamp(19px,5.2vw,28px);font-weight:700;line-height:1.6;letter-spacing:-.03em;color:var(--ink)}
+.closing__lead{font-size:clamp(19px,5.2vw,24px);font-weight:700;line-height:1.6;letter-spacing:-.03em;color:var(--ink)}
 .closing__lead b{font-weight:800;background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%)}
 .closing__sub{margin-top:20px;font-size:clamp(16px,4.4vw,18px);color:var(--mute);line-height:1.7}
+
+/* v29: PC에서도 모바일과 같은 비율 - 가운데 한 줄 페이지 */
+@media (min-width:700px){
+  html{background:#E7EBEF}
+  body{max-width:640px;margin:0 auto;background:#fff;box-shadow:0 0 46px rgba(16,36,58,.12);padding-bottom:calc(var(--dock-h) + 20px)}
+  .wrap{max-width:none;padding:0 32px}
+  .dock{left:calc(50% - 308px);right:calc(50% - 308px)}
+  .proofs{margin:0 -32px;padding:4px 32px 12px;grid-auto-columns:70%}
+}
 
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
 
 /* ===== PC / 태블릿 ===== */
-@media (min-width:900px){
+@media (min-width:99999px){
   body{padding-bottom:0;font-size:17px}
   .dock{display:none}
   .wrap{max-width:1120px;padding:0 40px}
