@@ -461,6 +461,13 @@ q{quotes:"“" "”"}
 /* v16: 첫 화면 썸네일은 16:9 원본 비율 그대로 */
 .hero .hero__media img{aspect-ratio:16/9 !important;object-fit:cover;object-position:50% 50% !important}
 
+/* v17: 고단가·고수익 박스를 연한 하늘색으로 */
+.price{background:#EAF3FF;color:var(--ink);border:1px solid #CFE0F5}
+.price__label{color:#2A5BB8;font-weight:700}
+.price__h{color:var(--navy)}
+.price__h em{color:var(--navy);background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .06em}
+.price__desc{color:#3A4350}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
