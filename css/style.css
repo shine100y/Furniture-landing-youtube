@@ -602,6 +602,13 @@ html{scroll-padding-top:72px}
   .foot{padding-bottom:110px}
 }
 
+/* v32 */
+.proof-line{text-align:center;font-size:15px;font-weight:700;color:var(--yellow);margin:0 0 12px}
+.proof-line span{font-weight:500;font-size:13px;color:#9FB0C4;margin-left:4px}
+
+#company .head h2{font-size:clamp(20px,5.8vw,40px)}
+#company .head h2 .mark{white-space:nowrap}
+
 /* ===== 푸터 ===== */
 .foot{background:#0B1928;color:#8797AA;text-align:center;font-size:13px;line-height:1.6;padding:32px 20px 36px}
 .foot__brand{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
